@@ -1,0 +1,137 @@
+
+
+/* =========== Estilização global ============== */
+
+*{
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --blue:#2a2185;
+    --white:#fff;
+    --gray:#f5f5f5;
+    --black1:#222;
+    --black2:#999;
+}
+.menu{
+  
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+.container{
+    
+    position: relative;
+    width: 100%;
+}
+.navigation{
+
+    background-color:var(--blue);
+    position: fixed;
+    width: 300px;
+    height: 100%;
+
+    border-left: 10px solid var(--blue);
+    transition: 0.5s;
+    overflow: hidden;
+}
+.navigation .nav .ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.navigation .nav .ul .li,
+.navigation .nav .ul .li.hovered{
+
+    position: relative;
+    width: 100%;
+    list-style: none;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+.navigation .nav .ul .li:hover{
+    background-color: var(--white);
+}
+.navigation .nav .ul .li:nth-child(1){
+    margin-bottom: 40px;
+    pointer-events: none;
+}
+
+
+
+
+
+
+.navigation .nav .ul .li .link{
+  position: relative;
+  display: block;
+  width: 100%;
+  display: flex;
+  text-decoration: none;
+  color: var(--white);
+}
+
+.navigation .nav .ul .li:hover .link,
+.navigation .nav .ul .li.hovered .link{
+    color: var(--blue);
+}
+
+.navigation .nav .ul .li .icon{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 75px;
+    text-align: center;
+}
+
+.navigation .nav .ul .li .link .icon .img{
+  
+  font-size: 1.75rem;
+  width:35px;
+  height: 35px;
+  margin-top:12px;
+}
+.navigation .nav .ul .li .link .title{
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+}
+
+/*=================== Curva fora de linha ========================*/
+
+.navigation .nav .ul .li:hover .link::before,
+.navigation .nav .ul .li.hovered .link::before{
+    content: '';
+    position: absolute;
+    right:0;
+    top:-50px;
+    width: 50px;
+    height: 50px;
+    background-color:transparent;
+    border-radius: 50%;
+    box-shadow: 35px 35px 0 10px var(--white);
+    pointer-events: none;
+}
+
+.navigation .nav .ul .li:hover .link::after,
+.navigation .nav .ul .li.hovered .link::after{
+    content: '';
+    position: absolute;
+    right:0;
+    bottom:-50px;
+    width: 50px;
+    height: 50px;
+    background-color:transparent;
+    border-radius: 50%;
+    box-shadow: 35px -35px 0 10px var(--white);
+    pointer-events: none;
+}
+

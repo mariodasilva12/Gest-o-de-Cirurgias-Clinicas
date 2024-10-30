@@ -1,0 +1,49 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.cadastro{
+    background-color: transparent;
+    color: black;
+}
+.cadastro .formulario{
+    color: black;
+}
+.tutulo{
+    color:black;
+
+}
+.cadastro .formulario{
+    position: absolute;
+    top:50px;
+    left: 50%;
+}
+.cadastro .formulario .p{
+    
+    color: black;
+    text-align: left;
+    padding-top:8px ;
+    padding-bottom: 8px;
+
+}
+.cadastro .formulario .input{
+    background-color: white;
+    padding: 8px;
+    border: 1px solid black;
+    width: 280px;
+}
+
+.cadastro .formulario .button{
+    background-color: #2a2185;
+    padding:8px;
+    color: white;
+    border: 1px solid #2a2185;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.cadastro .formulario .button:hover{
+    cursor: pointer;
+
+}
